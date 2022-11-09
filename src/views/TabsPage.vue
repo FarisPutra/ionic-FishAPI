@@ -8,7 +8,7 @@
           <ion-label>Home</ion-label>
         </ion-tab-button>
           
-        <ion-tab-button tab="tab2" href="/Page2">
+        <ion-tab-button tab="tab2" href="/ponds">
           <ion-icon :icon="ellipse" />
           <ion-label>Kolam</ion-label>
         </ion-tab-button>

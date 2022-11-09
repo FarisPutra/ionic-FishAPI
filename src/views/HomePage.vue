@@ -198,13 +198,13 @@ import
   IonGrid, 
   // IonSlides, 
   IonImg, 
-  // IonText, 
-  // IonRow, 
-  // IonCol, 
-  // IonCardHeader, 
-  // IonCardContent, 
-  // IonCardTitle, 
-  // IonCardSubtitle, 
+  IonText, 
+  IonRow, 
+  IonCol, 
+  IonCardHeader, 
+  IonCardContent, 
+  IonCardTitle, 
+  IonCardSubtitle, 
 } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { Autoplay, Keyboard, Pagination, Scrollbar, Zoom, FreeMode } from 'swiper';
@@ -232,13 +232,13 @@ export default defineComponent({
     IonImg,
     Swiper,
     SwiperSlide,
-    // IonText,
-    // IonRow,
-    // IonCol,
-    // IonCardHeader,
-    // IonCardContent,
-    // IonCardTitle,
-    // IonCardSubtitle
+    IonText,
+    IonRow,
+    IonCol,
+    IonCardHeader,
+    IonCardContent,
+    IonCardTitle,
+    IonCardSubtitle
   },
   setup() {
     return {

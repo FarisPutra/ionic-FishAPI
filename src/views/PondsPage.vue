@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content :fullscreen="true">
       <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button color="color4">
+        <ion-fab-button color="color4" @click="openModal">
           <ion-icon :icon="add" style="font-size: 32pt;"></ion-icon>
         </ion-fab-button>
       </ion-fab>
@@ -156,12 +156,22 @@ import
   // IonGrid,
   IonItem,
   IonIcon,
+  modalController,
+  IonButton,
+  IonText,
+  IonFab,
+  IonFabButton,
+  IonList,
+  IonListHeader,
+  IonLabel,
+  IonCardTitle
 } from '@ionic/vue';
 import { information, informationCircle, filter, funnel, add, calendarNumberOutline, timeOutline, fishOutline } from 'ionicons/icons';
 import { defineComponent } from 'vue';
+import RegisterPond from './RegisterPond.vue';
 
 export default defineComponent({
-  name: 'PageSecond',
+  name: 'PondsPage',
   components: {
     IonContent,
     // IonHeader,
@@ -171,11 +181,39 @@ export default defineComponent({
     IonCard,
     // IonGrid,
     IonItem,
-    IonIcon
+    IonIcon,
+    IonButton,
+    IonText,
+    IonFab,
+    IonFabButton,
+    IonList,
+    IonListHeader,
+    IonLabel,
+    IonCardTitle
   },
   setup() {
-      return { informationCircle, filter, funnel, add, calendarNumberOutline, timeOutline, fishOutline }
-    }
+    return { informationCircle, filter, funnel, add, calendarNumberOutline, timeOutline, fishOutline }
+  },
+  data() {
+    var titles:string[] = [];
+    return {
+      titles
+    };
+  },
+  methods: {
+    async openModal() {
+      const modal = await modalController.create({
+        component: RegisterPond,
+      });
+      modal.present();
+      
+      const { data, role } = await modal.onWillDismiss();
+      
+      if (role === 'confirm') {
+        this.titles.push(data);
+      }
+    },
+  },
 });
 </script>
 
