@@ -1,9 +1,9 @@
-# HCI - Assignment 2
+# HCI - Quiz 1
 
 ## Profile
-    Nama  : Muhammad Faris Heruputra
-    NIM   : 1313621014
-    Prodi : Ilmu Komputer 2021
+    Kenneth Sabastian - 1313621004
+    Muhammad Faris Heruputra - 1313621014
+    Krisna Humanis - 1313621015
 
 ## Summary
 **Ionic Application** for "FishAPI" design.
